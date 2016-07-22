@@ -8,7 +8,7 @@ I have no official ties to ChatSim; I'm just a customer!
 
 Note: This guide is based on the [walk-through](https://developers.facebook.com/docs/messenger-platform/quickstart) provided by Facebook. I didn't feel that it led you through the process in a way that made sense, so I'm rewriting it here. However, some text will be copied directly.
 
-### Create a Facebook App and Page
+### 1) Create a Facebook App and Page
 
 Create a new [Facebook App](https://developers.facebook.com/quickstarts/?platform=web). Once you've created your App copy down the App Secret, which can be found on the App dashboard.
 
@@ -17,15 +17,15 @@ Next create a [Facebook Page](https://www.facebook.com/pages/create). There are 
 Now go back to the App Dashboard and under Product Settings click "Add Product" and select "Messenger." In the Token Generation section, select your Page. A Page Access Token will be generated for you. Copy this Page Access Token.
 
 
-### Deploying to Heroku
+### 2) Deploying to Heroku
 
 Now you need to deploy your chatbot somewhere. Here I assume that you've already cloned the git repository and have it on your local machine. If you don't already have a [Heroku](https://www.heroku.com/) account make sure to create one. Then create a new app.
 
 Go to the Settings tab for your app, and click "Reveal Config Vars." You need to add four configuration variables:
 * `MESSENGER_APP_SECRET` - the App Secret you copied down earlier
 * `MESSENGER_PAGE_ACCESS_TOKEN` - the Page Access Token you copied down earlier
-* `MESSENGER_VALIDATION_TOKEN` - any string (you'll use it again later, so copy it down). Facebook uses `my_voice_is_my_password_verify_me` in their tutorial
-# `SERVER_URL` - you can find this by scrolling down the page to the "Domains" section of the settings page
+* `MESSENGER_VALIDATION_TOKEN` - any string (you'll use it again later, so copy it down). Facebook uses my_voice_is_my_password_verify_me in their tutorial
+* `SERVER_URL` - you can find this by scrolling down the page to the "Domains" section of the settings page
 
 Now it's time to push your application to Heroku! You can find the Git URL in the "Info" section of the settings page. First we'll add that URL as a remote. In the root directory of your local repository type:
 
@@ -39,7 +39,7 @@ Once you've done that you can deploy to Heroku at any time by typing:
 git subtree push --prefix node heroku master
 ```
 
-### Setting Up Webhooks
+### 3) Setting Up Webhooks
 
 Go back to the Facebook App dashboard. Navigate back to Messenger settings and in the Webhooks section, click "Setup Webhooks."
 
