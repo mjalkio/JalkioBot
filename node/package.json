@@ -1,7 +1,7 @@
 {
-  "name": "messenger-get-started",
-  "version": "1.0.0",
-  "description": "Get started example for Messenger Platform",
+  "name": "JalkioBot",
+  "version": "0.1.0",
+  "description": "A chatbot created by Michael Jalkio, built from an example by Facebook",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -10,9 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://source.developers.google.com/p/messenger-get-started/r/default"
+    "url": "https://github.com/mjalkio/JalkioBot"
   },
   "author": "Facebook",
+  "contributors": [{
+    "name": "Michael Jalkio",
+    "email": "mjalkio@gmail.com"
+  }],
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",
